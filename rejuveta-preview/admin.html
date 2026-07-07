@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel | Rejuveta Heritage & Conservation</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <style>
+    body { background: #eef4ec; }
+    .admin-shell { width: min(1080px, 92vw); margin: 48px auto; }
+    .admin-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+    .admin-header h1 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); line-height: 1; }
+    .admin-card { background: #fff; border: 1px solid rgba(30, 59, 49, .16); border-radius: 8px; padding: 28px; box-shadow: 0 18px 60px rgba(18, 32, 26, .10); }
+    .admin-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .admin-form label { display: grid; gap: 7px; font-weight: 800; }
+    .admin-form .full { grid-column: 1 / -1; }
+    .admin-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .admin-message { margin-bottom: 18px; padding: 14px 16px; border-radius: 8px; font-weight: 800; }
+    .admin-message.success { color: #17452a; background: #dff3e5; }
+    .admin-message.error { color: #7d1d1d; background: #f7dddd; }
+    .admin-note { color: #4d5d55; }
+    @media (max-width: 760px) {
+      .admin-shell { width: min(100% - 24px, 1080px); margin: 24px auto; }
+      .admin-header, .admin-form { display: block; }
+      .admin-header h1 { font-size: clamp(2.1rem, 12vw, 3rem); overflow-wrap: anywhere; }
+      .admin-card { padding: 20px; }
+      .admin-form label { margin-top: 14px; }
+      .admin-actions { display: grid; grid-template-columns: 1fr; }
+      .admin-actions .button { width: 100%; }
+      .admin-form input, .admin-form textarea { width: 100%; font-size: 16px; }
+    }
+  </style>
+</head>
+<body class="loaded">
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Vercel Backend</p>
+        <h1>Rejuveta Admin Panel</h1>
+      </div>
+      <a class="button button-secondary" href="/">View Site</a>
+    </header>
+
+    <section class="admin-card">
+      <div id="admin-message" class="admin-message" hidden></div>
+      <p class="admin-note">Update site text here. Only authorized users with the admin password can save changes.</p>
+      <form id="admin-form" class="admin-form">
+        <label class="full">Admin Password <input type="password" name="password" autocomplete="current-password" required></label>
+        <label class="full">Hero Title <input type="text" name="heroTitle" required></label>
+        <label class="full">Hero Subtitle <textarea name="heroSubtitle" rows="3" required></textarea></label>
+        <label>About Title <input type="text" name="aboutTitle" required></label>
+        <label>Focus Heading <input type="text" name="focusHeading" required></label>
+        <label class="full">About Text <textarea name="aboutText" rows="4" required></textarea></label>
+        <label>Contact Heading <input type="text" name="contactHeading" required></label>
+        <label>Phone <input type="text" name="phone" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Address <input type="text" name="address" required></label>
+        <label>Facebook URL <input type="text" name="facebook"></label>
+        <label>Instagram URL <input type="text" name="instagram"></label>
+        <label>LinkedIn URL <input type="text" name="linkedin"></label>
+        <div class="admin-actions full">
+          <button class="button button-primary" type="submit">Save Website Updates</button>
+          <button class="button button-secondary" type="button" id="reload-content">Reload Content</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

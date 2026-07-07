@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WordPress Backend Test | Rejuveta Heritage & Conservation</title>
+  <meta name="description" content="Open the Rejuveta Heritage WordPress theme in WordPress Playground and test the backend panel.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://playground.wordpress.net">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <style>
+    .test-hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 120px 24px;
+      background: #eef4ec;
+    }
+    .test-card {
+      width: min(760px, 100%);
+      background: #fff;
+      border: 1px solid rgba(27, 55, 43, .16);
+      border-radius: 8px;
+      padding: 44px;
+      box-shadow: 0 24px 70px rgba(17, 32, 25, .12);
+    }
+    .test-card h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.2rem, 5vw, 4.8rem);
+      line-height: .98;
+    }
+    .test-card p {
+      font-size: 1.05rem;
+      color: #46544d;
+    }
+    .test-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .test-note {
+      margin-top: 26px;
+      padding: 16px;
+      background: #f7f5ee;
+      border-left: 4px solid #b8792d;
+      border-radius: 6px;
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="test-hero">
+    <section class="test-card">
+      <p class="eyebrow">Live WordPress Test</p>
+      <h1>Test the Rejuveta Backend Panel</h1>
+      <p>This opens a temporary WordPress site in your browser and loads a safe Rejuveta backend-panel demo. Use the full ZIP below for the real WordPress theme installation.</p>
+      <div class="test-actions">
+        <a class="button button-primary" href="https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Frejuveta-preview.vercel.app%2Fplayground-blueprint.json%3Fv%3D9" target="_blank" rel="noopener">Open WordPress Backend Test</a>
+        <a class="button button-secondary" href="downloads/rejuveta-heritage-wp-upload.zip">Download Correct WordPress Theme ZIP</a>
+      </div>
+      <p class="test-note">This is a browser-based WordPress test site. Changes made inside it are temporary. For a permanent backend, install the ZIP on real WordPress hosting.</p>
+    </section>
+  </main>
+</body>
+</html>

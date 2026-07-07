@@ -1,0 +1,27 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "landingPage": "/wp-admin/admin.php?page=rejuveta-panel",
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; $plugin = file_get_contents('https://rejuveta-preview.vercel.app/downloads/rejuveta-panel.php?v=9'); file_put_contents(WPMU_PLUGIN_DIR . '/rejuveta-panel.php', $plugin); update_option('blogname', 'Rejuveta Heritage & Conservation'); update_option('blogdescription', 'Reviving Heritage. Preserving Legacy.');"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin
+Disallow: /wordpress-test
+Disallow: /api/
+Disallow: /downloads/
+Sitemap: https://rejuveta-preview.vercel.app/sitemap.xml
