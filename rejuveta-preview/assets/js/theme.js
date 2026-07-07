@@ -338,5 +338,7 @@
         }
     }
 
-    hydrateManagedContent();
+    if (document.body.dataset.managedContent === 'true') {
+        hydrateManagedContent();
+    }
 })();
