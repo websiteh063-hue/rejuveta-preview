@@ -316,6 +316,9 @@
 
             document.querySelectorAll('[data-content]').forEach(function (element) {
                 const key = element.dataset.content;
+                if (key === 'address' && content[key] === 'Add your office address here') {
+                    return;
+                }
                 if (content[key]) {
                     element.textContent = content[key];
                     if (element.classList.contains('typing-text')) {
